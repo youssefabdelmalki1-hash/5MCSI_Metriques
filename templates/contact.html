@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact</title>
+  </head>
+  <body>
+    <h2>Formulaire de contact</h2>
+
+    <form action="/contact/" method="post">
+      <div>
+        <label for="nom">Nom :</label><br />
+        <input type="text" id="nom" name="nom" required />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="prenom">Prénom :</label><br />
+        <input type="text" id="prenom" name="prenom" required />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="message">Message :</label><br />
+        <textarea id="message" name="message" rows="5" cols="30" required></textarea>
+      </div>
+
+      <br />
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </body>
+</html>
