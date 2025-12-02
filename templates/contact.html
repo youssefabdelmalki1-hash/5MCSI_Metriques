@@ -1,35 +1,97 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Contact</title>
-  </head>
-  <body>
-    <h2>Formulaire de contact</h2>
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact</title>
+  <style>
+    body {
+      background-color: #fafafa;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: #fff;
+      width: 350px;
+      padding: 40px 35px;
+      border: 1px solid #dbdbdb;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      border: 1px solid #dbdbdb;
+      border-radius: 6px;
+      font-size: 14px;
+      background-color: #fafafa;
+      transition: all 0.2s ease-in-out;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #a8a8a8;
+      background-color: #fff;
+    }
+
+    textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      background-color: #0095f6;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #007acb;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Contact</h2>
 
     <form action="/contact/" method="post">
-      <div>
-        <label for="nom">Nom :</label><br />
-        <input type="text" id="nom" name="nom" required />
-      </div>
 
-      <br />
+      <label>Nom</label>
+      <input type="text" name="nom" placeholder="Votre nom" required>
 
-      <div>
-        <label for="prenom">Prénom :</label><br />
-        <input type="text" id="prenom" name="prenom" required />
-      </div>
+      <label>Prénom</label>
+      <input type="text" name="prenom" placeholder="Votre prénom" required>
 
-      <br />
-
-      <div>
-        <label for="message">Message :</label><br />
-        <textarea id="message" name="message" rows="5" cols="30" required></textarea>
-      </div>
-
-      <br />
+      <label>Message</label>
+      <textarea name="message" placeholder="Votre message..." required></textarea>
 
       <button type="submit">Envoyer</button>
+
     </form>
-  </body>
+  </div>
+
+</body>
 </html>
