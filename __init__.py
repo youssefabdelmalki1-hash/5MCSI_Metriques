@@ -41,7 +41,8 @@ def mongraphique():
 
 @app.route("/histogramme/")
 def histogramme():
-    return render_template("histogramme.html")
+    return render_template("histogramme.html") 
+  
 @app.route('/commits_data/')
 def commits():
     # Récupération des commits depuis le repo d'origine
