@@ -4,6 +4,10 @@ from flask import json
 from datetime import datetime
 from urllib.request import urlopen
 import sqlite3
+import json
+from urllib.request import urlopen
+from datetime import datetime
+from flask import jsonify, render_template
                                                                                                                                        
 app = Flask(__name__)                                                                                                                  
                                                                                                                                        
@@ -38,8 +42,6 @@ def mongraphique():
 @app.route("/histogramme/")
 def histogramme():
     return render_template("histogramme.html")
--
--
 
 if __name__ == "__main__":
   app.run(debug=True)
